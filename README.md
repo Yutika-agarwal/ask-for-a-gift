@@ -120,12 +120,10 @@ Full definitions and event schema: [docs/metrics.md](docs/metrics.md).
 
 **Now (this repo):** the demo above, the eval, the guardrails.
 
-**Next:** review and correct the labels; run and cache the Claude-understanding eval (`npm run eval:llm`); a calibrated confidence score; replace static word vectors with a real sentence-embedding model and re-run the eval; real-product sources (the [featured-picks slot](#featured-picks) is waiting on source lists); handle "missing age data means unsafe".
+**Next:** review and correct the labels; run and cache the Claude-understanding eval (`npm run eval:llm`); a calibrated confidence score; replace static word vectors with a real sentence-embedding model and re-run the eval; credited real-product picks from public gift guides as a separate, labelled slice (the `source` field on each item already supports it); handle "missing age data means unsafe".
 
 **Later:** live inventory and price feeds; learning-to-rank from thumbs; group gifting and gift registries; multilingual requests; an exploration policy for new products.
 
-### Featured picks
-The plan was to include about 50 real picks from public gift guides, credited and linked, with no copied text. Those sites block my build environment, so this is **not done**: the catalog is 100% synthetic today. Items carry a `source` field (`"synthetic"`) so credited picks can be added and reported as a separate slice.
 
 ## 8. How to run locally
 
