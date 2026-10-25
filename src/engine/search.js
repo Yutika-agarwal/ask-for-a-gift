@@ -39,7 +39,7 @@ export function buildIndex(catalog, table) {
   const avgLen = docs.reduce((a, d) => a + d.len, 0) / N;
   const spellVocab = buildSpellVocab(catalog, table.words);
   const hasVector = (w) => table.index.has(w);
-  return { docs, df, N, avgLen, table, spellVocab, ctx: { spellVocab, hasVector }, byId: new Map(catalog.map((p) => [p.id, p])) };
+  return { docs, df, N, avgLen, table, spellVocab, ctx: { spellVocab, hasVector }, byId: new Map(catalog.map((p) => [p.id, p])), docById: new Map(docs.map((d) => [d.p.id, d])) };
 }
 
 function bm25(index, doc, qStems) {
@@ -118,6 +118,9 @@ export function violation(index, doc, u) {
   if (ex) return { type: "excluded", text: `matches something you ruled out ("${ex}")` };
   return null;
 }
+
+/** Violation check for any product (used to flag what plain keyword search got wrong). */
+export const checkProduct = (index, p, u) => violation(index, index.docById.get(p.id), u);
 
 // ---------- hybrid pipeline ----------
 
