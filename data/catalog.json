@@ -1286,7 +1286,7 @@
  },
  {
   "id": "p0026",
-  "name": "Pro precision screwdriver set (Charcoal)",
+  "name": "Precision screwdriver set (Charcoal)",
   "category": "tools",
   "interests": [
    "woodworking",
@@ -1298,7 +1298,7 @@
    "workshop",
    "battery-powered"
   ],
-  "description": "Pro precision screwdriver set (charcoal) for woodworking fans. Simple and reliable, battery-powered.",
+  "description": "Precision screwdriver set (charcoal) for woodworking fans. Simple and reliable, battery-powered.",
   "price": 17.99,
   "age_min": 14,
   "age_max": 99,
@@ -1390,7 +1390,7 @@
  },
  {
   "id": "p0028",
-  "name": "Smart wireless charger",
+  "name": "Slim phone tripod (Rose)",
   "category": "tech",
   "interests": [
    "tech",
@@ -1400,13 +1400,13 @@
   "tags": [
    "tech",
    "needs batteries",
-   "no batteries"
+   "battery-powered"
   ],
-  "description": "Smart wireless charger for tech fans. Thoughtfully designed, no batteries needed.",
-  "price": 27.99,
+  "description": "Slim phone tripod (rose) for tech fans. A crowd-pleaser, battery-powered.",
+  "price": 42.99,
   "age_min": 12,
   "age_max": 99,
-  "battery": false,
+  "battery": true,
   "small_parts": false,
   "allergens": [],
   "recipients": [
@@ -1421,20 +1421,20 @@
    "christmas",
    "father's day"
   ],
-  "rating": 4.2,
-  "review_count": 80,
+  "rating": 3.0,
+  "review_count": 18,
   "reviews": [
    {
     "stars": 2,
-    "text": "Okay overall; mine took longer to arrive than promised."
-   },
-   {
-    "stars": 3,
     "text": "Decent, but the packaging was dented."
    },
    {
+    "stars": 5,
+    "text": "Setup took a minute. Would buy again."
+   },
+   {
     "stars": 3,
-    "text": "Decent, but the packaging was dented."
+    "text": "A bit pricier than I expected for what it is."
    }
   ],
   "synthetic": true,
@@ -1442,7 +1442,7 @@
  },
  {
   "id": "p0029",
-  "name": "Beginner pottery clay set (Sage)",
+  "name": "Pottery clay set (Sage)",
   "category": "crafts",
   "interests": [
    "crafts",
@@ -1455,7 +1455,7 @@
    "calm",
    "no batteries"
   ],
-  "description": "Beginner pottery clay set (sage) for crafts fans. A crowd-pleaser, no batteries needed.",
+  "description": "Pottery clay set (sage) for crafts fans. A crowd-pleaser, no batteries needed.",
   "price": 22.99,
   "age_min": 7,
   "age_max": 99,
@@ -1495,7 +1495,7 @@
  },
  {
   "id": "p0030",
-  "name": "Smart smart plug set (Rose)",
+  "name": "Smart wireless charger",
   "category": "tech",
   "interests": [
    "tech",
@@ -1507,8 +1507,8 @@
    "needs batteries",
    "battery-powered"
   ],
-  "description": "Smart smart plug set (rose) for tech fans. Simple and reliable, battery-powered.",
-  "price": 16.99,
+  "description": "Smart wireless charger for tech fans. Thoughtfully designed, battery-powered.",
+  "price": 28.99,
   "age_min": 12,
   "age_max": 99,
   "battery": true,
@@ -1526,20 +1526,20 @@
    "christmas",
    "father's day"
   ],
-  "rating": 4.7,
-  "review_count": 547,
+  "rating": 4.8,
+  "review_count": 1683,
   "reviews": [
    {
+    "stars": 4,
+    "text": "Reliable. Would buy again."
+   },
+   {
     "stars": 5,
-    "text": "Honestly better than expected, reliable."
+    "text": "Works as described. Would buy again."
    },
    {
     "stars": 5,
     "text": "Honestly better than expected, works as described."
-   },
-   {
-    "stars": 4,
-    "text": "Bought this as a gift and it was a hit: reliable."
    }
   ],
   "synthetic": true,
@@ -1547,7 +1547,7 @@
  },
  {
   "id": "p0031",
-  "name": "Durable chew toy set (Navy)",
+  "name": "Chew toy set (Navy)",
   "category": "dog",
   "interests": [
    "dogs",
@@ -1558,7 +1558,7 @@
    "pets",
    "no batteries"
   ],
-  "description": "Durable chew toy set (navy) for dogs fans. Thoughtfully designed, no batteries needed.",
+  "description": "Chew toy set (navy) for dogs fans. Thoughtfully designed, no batteries needed.",
   "price": 6.49,
   "age_min": 0,
   "age_max": 99,
@@ -1806,7 +1806,7 @@
  },
  {
   "id": "p0036",
-  "name": "Creative brick building set (Sage)",
+  "name": "Brick building set (Sage)",
   "category": "building",
   "interests": [
    "building",
@@ -1819,7 +1819,7 @@
    "stem",
    "no batteries"
   ],
-  "description": "Creative brick building set (sage) for building fans. Thoughtfully designed, no batteries needed.",
+  "description": "Brick building set (sage) for building fans. Thoughtfully designed, no batteries needed.",
   "price": 41.99,
   "age_min": 4,
   "age_max": 99,
@@ -1857,7 +1857,7 @@
  },
  {
   "id": "p0037",
-  "name": "Soft soft crinkle book",
+  "name": "Soft crinkle book",
   "category": "baby",
   "interests": [
    "baby",
@@ -1868,7 +1868,7 @@
    "baby",
    "battery-powered"
   ],
-  "description": "Soft soft crinkle book for baby fans. Thoughtfully designed, battery-powered.",
+  "description": "Soft crinkle book for baby fans. Thoughtfully designed, battery-powered.",
   "price": 74.99,
   "age_min": 0,
   "age_max": 2,
@@ -3370,7 +3370,7 @@
  },
  {
   "id": "p0066",
-  "name": "Giant sidewalk chalk set (Navy)",
+  "name": "Sidewalk chalk set (Navy)",
   "category": "outdoorplay",
   "interests": [
    "outdoor play",
@@ -3382,7 +3382,7 @@
    "active",
    "no batteries"
   ],
-  "description": "Giant sidewalk chalk set (navy) for outdoor play fans. Simple and reliable, no batteries needed.",
+  "description": "Sidewalk chalk set (navy) for outdoor play fans. Simple and reliable, no batteries needed.",
   "price": 20.99,
   "age_min": 3,
   "age_max": 14,
@@ -4138,7 +4138,7 @@
  },
  {
   "id": "p0081",
-  "name": "Hydrating face mask set (Charcoal)",
+  "name": "Face mask set (Charcoal)",
   "category": "selfcare",
   "interests": [
    "skincare",
@@ -4152,7 +4152,7 @@
    "fragrance-free",
    "no batteries"
   ],
-  "description": "Hydrating face mask set (charcoal) for skincare fans. A crowd-pleaser, no batteries needed.",
+  "description": "Face mask set (charcoal) for skincare fans. A crowd-pleaser, no batteries needed.",
   "price": 18.99,
   "age_min": 12,
   "age_max": 99,
@@ -4450,7 +4450,7 @@
  },
  {
   "id": "p0087",
-  "name": "Soft soft board book set (Sage)",
+  "name": "Soft board book set (Navy)",
   "category": "toddler",
   "interests": [
    "toddler",
@@ -4462,8 +4462,8 @@
    "early learning",
    "no batteries"
   ],
-  "description": "Soft soft board book set (sage) for toddler fans. Thoughtfully designed, no batteries needed.",
-  "price": 12.99,
+  "description": "Soft board book set (navy) for toddler fans. Thoughtfully designed, no batteries needed.",
+  "price": 24.99,
   "age_min": 3,
   "age_max": 4,
   "battery": false,
@@ -4480,20 +4480,20 @@
    "baby shower",
    "christmas"
   ],
-  "rating": 4.5,
-  "review_count": 401,
+  "rating": 4.0,
+  "review_count": 127,
   "reviews": [
    {
-    "stars": 5,
-    "text": "Calming. Would buy again."
-   },
-   {
     "stars": 4,
-    "text": "Honestly better than expected, perfect size for small hands."
+    "text": "Bought this as a gift and it was a hit: survived the throwing phase."
    },
    {
-    "stars": 5,
-    "text": "Arrived quickly and perfect size for small hands."
+    "stars": 3,
+    "text": "Decent, but the packaging was dented."
+   },
+   {
+    "stars": 2,
+    "text": "A bit pricier than I expected for what it is."
    }
   ],
   "synthetic": true,
@@ -5169,7 +5169,7 @@
  },
  {
   "id": "p0101",
-  "name": "Smart smart plug set",
+  "name": "Smart plug set (Rose)",
   "category": "tech",
   "interests": [
    "tech",
@@ -5179,13 +5179,13 @@
   "tags": [
    "tech",
    "needs batteries",
-   "no batteries"
+   "battery-powered"
   ],
-  "description": "Smart smart plug set for tech fans. Simple and reliable, no batteries needed.",
-  "price": 18.99,
+  "description": "Smart plug set (rose) for tech fans. Thoughtfully designed, battery-powered.",
+  "price": 13.99,
   "age_min": 12,
   "age_max": 99,
-  "battery": false,
+  "battery": true,
   "small_parts": false,
   "allergens": [],
   "recipients": [
@@ -5200,20 +5200,20 @@
    "christmas",
    "father's day"
   ],
-  "rating": 4.3,
-  "review_count": 15,
+  "rating": 4.8,
+  "review_count": 1169,
   "reviews": [
    {
-    "stars": 4,
-    "text": "Reliable. Would buy again."
+    "stars": 5,
+    "text": "Works as described. Would buy again."
    },
    {
-    "stars": 3,
-    "text": "Works fine, though the instructions could be clearer."
+    "stars": 5,
+    "text": "Arrived quickly and reliable."
    },
    {
-    "stars": 4,
-    "text": "Setup took a minute. Would buy again."
+    "stars": 5,
+    "text": "Bought this as a gift and it was a hit: setup took a minute."
    }
   ],
   "synthetic": true,
@@ -6453,7 +6453,7 @@
  },
  {
   "id": "p0126",
-  "name": "Starter wooden construction set (Charcoal)",
+  "name": "Wooden construction set (Charcoal)",
   "category": "building",
   "interests": [
    "building",
@@ -6466,7 +6466,7 @@
    "stem",
    "battery-powered"
   ],
-  "description": "Starter wooden construction set (charcoal) for building fans. A crowd-pleaser, battery-powered.",
+  "description": "Wooden construction set (charcoal) for building fans. A crowd-pleaser, battery-powered.",
   "price": 92.99,
   "age_min": 4,
   "age_max": 99,
@@ -7542,7 +7542,7 @@
  },
  {
   "id": "p0147",
-  "name": "Complete pottery clay set (Navy)",
+  "name": "Pottery clay set (Navy)",
   "category": "crafts",
   "interests": [
    "crafts",
@@ -7555,7 +7555,7 @@
    "calm",
    "no batteries"
   ],
-  "description": "Complete pottery clay set (navy) for crafts fans. Thoughtfully designed, no batteries needed.",
+  "description": "Pottery clay set (navy) for crafts fans. Thoughtfully designed, no batteries needed.",
   "price": 33.99,
   "age_min": 7,
   "age_max": 99,
@@ -7913,7 +7913,7 @@
  },
  {
   "id": "p0154",
-  "name": "Copper cocktail shaker set (Sage)",
+  "name": "Cocktail shaker set (Sage)",
   "category": "cocktails",
   "interests": [
    "cocktails",
@@ -7925,7 +7925,7 @@
    "entertaining",
    "no batteries"
   ],
-  "description": "Copper cocktail shaker set (sage) for cocktails fans. Made to last, no batteries needed.",
+  "description": "Cocktail shaker set (sage) for cocktails fans. Made to last, no batteries needed.",
   "price": 21.99,
   "age_min": 21,
   "age_max": 99,
@@ -8231,7 +8231,7 @@
  },
  {
   "id": "p0160",
-  "name": "Pro camera strap",
+  "name": "Vintage photo album",
   "category": "photo",
   "interests": [
    "photography",
@@ -8240,13 +8240,13 @@
   ],
   "tags": [
    "creative",
-   "battery-powered"
+   "no batteries"
   ],
-  "description": "Pro camera strap for photography fans. Made to last, battery-powered.",
-  "price": 17.99,
+  "description": "Vintage photo album for photography fans. A crowd-pleaser, no batteries needed.",
+  "price": 15.99,
   "age_min": 8,
   "age_max": 99,
-  "battery": true,
+  "battery": false,
   "small_parts": false,
   "allergens": [],
   "recipients": [
@@ -8261,20 +8261,20 @@
    "christmas",
    "wedding"
   ],
-  "rating": 3.2,
-  "review_count": 73,
+  "rating": 4.3,
+  "review_count": 42,
   "reviews": [
    {
+    "stars": 2,
+    "text": "Okay overall; mine took longer to arrive than promised."
+   },
+   {
     "stars": 3,
-    "text": "Decent, but the packaging was dented."
+    "text": "Okay overall; mine took longer to arrive than promised."
    },
    {
     "stars": 4,
-    "text": "Honestly better than expected, easy to use."
-   },
-   {
-    "stars": 2,
-    "text": "Works fine, though the instructions could be clearer."
+    "text": "Honestly better than expected, good build."
    }
   ],
   "synthetic": true,
@@ -8332,7 +8332,7 @@
  },
  {
   "id": "p0162",
-  "name": "Deluxe cookie cutter set (Blue)",
+  "name": "Cookie cutter set (Blue)",
   "category": "baking",
   "interests": [
    "baking",
@@ -8343,7 +8343,7 @@
    "kitchen",
    "battery-powered"
   ],
-  "description": "Deluxe cookie cutter set (blue) for baking fans. Simple and reliable, battery-powered.",
+  "description": "Cookie cutter set (blue) for baking fans. Simple and reliable, battery-powered.",
   "price": 89.99,
   "age_min": 8,
   "age_max": 99,
@@ -8437,7 +8437,7 @@
  },
  {
   "id": "p0164",
-  "name": "RGB gaming headset (Navy)",
+  "name": "Gaming headset (Navy)",
   "category": "gaming",
   "interests": [
    "gaming",
@@ -8449,7 +8449,7 @@
    "screen",
    "battery-powered"
   ],
-  "description": "Rgb gaming headset (navy) for gaming fans. Made to last, battery-powered.",
+  "description": "Gaming headset (navy) for gaming fans. Made to last, battery-powered.",
   "price": 39.99,
   "age_min": 7,
   "age_max": 99,
@@ -8539,7 +8539,7 @@
  },
  {
   "id": "p0166",
-  "name": "Wooden wooden shape sorter (Blue)",
+  "name": "Wooden shape sorter",
   "category": "toddler",
   "interests": [
    "toddler",
@@ -8549,13 +8549,13 @@
   ],
   "tags": [
    "early learning",
-   "no batteries"
+   "battery-powered"
   ],
-  "description": "Wooden wooden shape sorter (blue) for toddler fans. Made to last, no batteries needed.",
-  "price": 51.99,
+  "description": "Wooden shape sorter for toddler fans. Made to last, battery-powered.",
+  "price": 47.99,
   "age_min": 3,
   "age_max": 4,
-  "battery": false,
+  "battery": true,
   "small_parts": true,
   "allergens": [],
   "recipients": [
@@ -8569,8 +8569,8 @@
    "baby shower",
    "christmas"
   ],
-  "rating": 3.8,
-  "review_count": 23,
+  "rating": 3.9,
+  "review_count": 4,
   "reviews": [
    {
     "stars": 2,
@@ -8843,7 +8843,7 @@
  },
  {
   "id": "p0172",
-  "name": "Explorer microscope set (Sage)",
+  "name": "Microscope set (Sage)",
   "category": "science",
   "interests": [
    "science",
@@ -8856,7 +8856,7 @@
    "learning",
    "no batteries"
   ],
-  "description": "Explorer microscope set (sage) for science fans. Made to last, no batteries needed.",
+  "description": "Microscope set (sage) for science fans. Made to last, no batteries needed.",
   "price": 75.99,
   "age_min": 5,
   "age_max": 14,
@@ -8945,7 +8945,7 @@
  },
  {
   "id": "p0174",
-  "name": "Leather leather bookmark set",
+  "name": "Leather bookmark set",
   "category": "reading",
   "interests": [
    "reading",
@@ -8955,13 +8955,13 @@
   "tags": [
    "quiet",
    "indoor",
-   "no batteries"
+   "battery-powered"
   ],
-  "description": "Leather leather bookmark set for reading fans. Thoughtfully designed, no batteries needed.",
-  "price": 55.99,
+  "description": "Leather bookmark set for reading fans. A crowd-pleaser, battery-powered.",
+  "price": 69.99,
   "age_min": 8,
   "age_max": 99,
-  "battery": false,
+  "battery": true,
   "small_parts": false,
   "allergens": [],
   "recipients": [
@@ -8976,12 +8976,12 @@
    "christmas",
    "thank you"
   ],
-  "rating": 3.2,
-  "review_count": 34,
+  "rating": 3.9,
+  "review_count": 1235,
   "reviews": [
    {
-    "stars": 3,
-    "text": "Works fine, though the instructions could be clearer."
+    "stars": 4,
+    "text": "Honestly better than expected, thoughtful."
    },
    {
     "stars": 5,
@@ -9929,7 +9929,7 @@
  },
  {
   "id": "p0193",
-  "name": "Chunky soft board book set (Sage)",
+  "name": "Soft board book set (Sage)",
   "category": "toddler",
   "interests": [
    "toddler",
@@ -9941,7 +9941,7 @@
    "early learning",
    "battery-powered"
   ],
-  "description": "Chunky soft board book set (sage) for toddler fans. Simple and reliable, battery-powered.",
+  "description": "Soft board book set (sage) for toddler fans. Simple and reliable, battery-powered.",
   "price": 49.99,
   "age_min": 3,
   "age_max": 4,
@@ -10188,7 +10188,7 @@
  },
  {
   "id": "p0198",
-  "name": "Chunky soft board book set (Natural)",
+  "name": "Soft board book set (Natural)",
   "category": "toddler",
   "interests": [
    "toddler",
@@ -10200,7 +10200,7 @@
    "early learning",
    "no batteries"
   ],
-  "description": "Chunky soft board book set (natural) for toddler fans. Thoughtfully designed, no batteries needed.",
+  "description": "Soft board book set (natural) for toddler fans. Thoughtfully designed, no batteries needed.",
   "price": 14.99,
   "age_min": 3,
   "age_max": 4,
@@ -10286,7 +10286,7 @@
  },
  {
   "id": "p0200",
-  "name": "Compact photo printer (Blue)",
+  "name": "Vintage camera strap",
   "category": "photo",
   "interests": [
    "photography",
@@ -10297,8 +10297,8 @@
    "creative",
    "no batteries"
   ],
-  "description": "Compact photo printer (blue) for photography fans. A crowd-pleaser, no batteries needed.",
-  "price": 19.99,
+  "description": "Vintage camera strap for photography fans. Made to last, no batteries needed.",
+  "price": 9.99,
   "age_min": 8,
   "age_max": 99,
   "battery": false,
@@ -10316,20 +10316,20 @@
    "christmas",
    "wedding"
   ],
-  "rating": 4.8,
-  "review_count": 30,
+  "rating": 3.4,
+  "review_count": 156,
   "reviews": [
    {
-    "stars": 4,
-    "text": "Great memories. Would buy again."
+    "stars": 5,
+    "text": "Honestly better than expected, good build."
    },
    {
-    "stars": 5,
-    "text": "Bought this as a gift and it was a hit: easy to use."
+    "stars": 3,
+    "text": "A bit pricier than I expected for what it is."
    },
    {
-    "stars": 5,
-    "text": "Honestly better than expected, easy to use."
+    "stars": 3,
+    "text": "Decent, but the packaging was dented."
    }
   ],
   "synthetic": true,
@@ -10437,7 +10437,7 @@
  },
  {
   "id": "p0203",
-  "name": "Cozy feather wand set (Rose)",
+  "name": "Feather wand set (Rose)",
   "category": "cat",
   "interests": [
    "cats",
@@ -10448,7 +10448,7 @@
    "pets",
    "no batteries"
   ],
-  "description": "Cozy feather wand set (rose) for cats fans. Thoughtfully designed, no batteries needed.",
+  "description": "Feather wand set (rose) for cats fans. Thoughtfully designed, no batteries needed.",
   "price": 19.99,
   "age_min": 0,
   "age_max": 99,
@@ -11266,7 +11266,7 @@
  },
  {
   "id": "p0219",
-  "name": "Compact mini tripod",
+  "name": "Pro photo album (Charcoal)",
   "category": "photo",
   "interests": [
    "photography",
@@ -11277,8 +11277,8 @@
    "creative",
    "battery-powered"
   ],
-  "description": "Compact mini tripod for photography fans. Simple and reliable, battery-powered.",
-  "price": 10.49,
+  "description": "Pro photo album (charcoal) for photography fans. Thoughtfully designed, battery-powered.",
+  "price": 55.99,
   "age_min": 8,
   "age_max": 99,
   "battery": true,
@@ -11296,20 +11296,20 @@
    "christmas",
    "wedding"
   ],
-  "rating": 4.3,
-  "review_count": 35,
+  "rating": 4.6,
+  "review_count": 9,
   "reviews": [
    {
-    "stars": 4,
-    "text": "Bought this as a gift and it was a hit: easy to use."
-   },
-   {
-    "stars": 2,
-    "text": "Works fine, though the instructions could be clearer."
+    "stars": 5,
+    "text": "Bought this as a gift and it was a hit: good build."
    },
    {
     "stars": 3,
-    "text": "A bit pricier than I expected for what it is."
+    "text": "Works fine, though the instructions could be clearer."
+   },
+   {
+    "stars": 5,
+    "text": "Bought this as a gift and it was a hit: easy to use."
    }
   ],
   "synthetic": true,
@@ -11475,7 +11475,7 @@
  },
  {
   "id": "p0223",
-  "name": "Premium washi tape set (Natural)",
+  "name": "Premium dotted notebook",
   "category": "stationery",
   "interests": [
    "journaling",
@@ -11487,8 +11487,8 @@
    "office",
    "no batteries"
   ],
-  "description": "Premium washi tape set (natural) for journaling fans. Thoughtfully designed, no batteries needed.",
-  "price": 9.49,
+  "description": "Premium dotted notebook for journaling fans. A crowd-pleaser, no batteries needed.",
+  "price": 54.99,
   "age_min": 8,
   "age_max": 99,
   "battery": false,
@@ -11507,20 +11507,20 @@
    "new year",
    "birthday"
   ],
-  "rating": 4.7,
-  "review_count": 4,
+  "rating": 3.9,
+  "review_count": 90,
   "reviews": [
    {
     "stars": 4,
-    "text": "Pen glides smoothly. Would buy again."
+    "text": "Paper feels great. Would buy again."
    },
    {
     "stars": 5,
     "text": "Pen glides smoothly. Would buy again."
    },
    {
-    "stars": 5,
-    "text": "Bought this as a gift and it was a hit: pen glides smoothly."
+    "stars": 2,
+    "text": "Decent, but the packaging was dented."
    }
   ],
   "synthetic": true,
@@ -12050,7 +12050,7 @@
  },
  {
   "id": "p0234",
-  "name": "Linen washi tape set (Natural)",
+  "name": "Washi tape set (Natural)",
   "category": "stationery",
   "interests": [
    "journaling",
@@ -12062,7 +12062,7 @@
    "office",
    "no batteries"
   ],
-  "description": "Linen washi tape set (natural) for journaling fans. A crowd-pleaser, no batteries needed.",
+  "description": "Washi tape set (natural) for journaling fans. A crowd-pleaser, no batteries needed.",
   "price": 11.49,
   "age_min": 8,
   "age_max": 99,
@@ -12103,7 +12103,7 @@
  },
  {
   "id": "p0235",
-  "name": "Pro camera strap (Navy)",
+  "name": "Pro camera strap",
   "category": "photo",
   "interests": [
    "photography",
@@ -12114,8 +12114,8 @@
    "creative",
    "no batteries"
   ],
-  "description": "Pro camera strap (navy) for photography fans. A crowd-pleaser, no batteries needed.",
-  "price": 42.99,
+  "description": "Pro camera strap for photography fans. A crowd-pleaser, no batteries needed.",
+  "price": 103.99,
   "age_min": 8,
   "age_max": 99,
   "battery": false,
@@ -12133,9 +12133,13 @@
    "christmas",
    "wedding"
   ],
-  "rating": 3.8,
-  "review_count": 531,
+  "rating": 3.5,
+  "review_count": 7,
   "reviews": [
+   {
+    "stars": 2,
+    "text": "Works fine, though the instructions could be clearer."
+   },
    {
     "stars": 2,
     "text": "Okay overall; mine took longer to arrive than promised."
@@ -12143,10 +12147,6 @@
    {
     "stars": 2,
     "text": "Decent, but the packaging was dented."
-   },
-   {
-    "stars": 3,
-    "text": "Okay overall; mine took longer to arrive than promised."
    }
   ],
   "synthetic": true,
@@ -12154,7 +12154,7 @@
  },
  {
   "id": "p0236",
-  "name": "Nonstick cookie cutter set (Navy)",
+  "name": "Cookie cutter set (Navy)",
   "category": "baking",
   "interests": [
    "baking",
@@ -12165,7 +12165,7 @@
    "kitchen",
    "no batteries"
   ],
-  "description": "Nonstick cookie cutter set (navy) for baking fans. A crowd-pleaser, no batteries needed.",
+  "description": "Cookie cutter set (navy) for baking fans. A crowd-pleaser, no batteries needed.",
   "price": 19.99,
   "age_min": 8,
   "age_max": 99,
@@ -13249,7 +13249,7 @@
  },
  {
   "id": "p0257",
-  "name": "Leather leather bookmark set (Blue)",
+  "name": "Leather bookmark set (Blue)",
   "category": "reading",
   "interests": [
    "reading",
@@ -13261,8 +13261,8 @@
    "indoor",
    "battery-powered"
   ],
-  "description": "Leather leather bookmark set (blue) for reading fans. Simple and reliable, battery-powered.",
-  "price": 8.99,
+  "description": "Leather bookmark set (blue) for reading fans. Thoughtfully designed, battery-powered.",
+  "price": 11.99,
   "age_min": 8,
   "age_max": 99,
   "battery": true,
@@ -13280,20 +13280,20 @@
    "christmas",
    "thank you"
   ],
-  "rating": 4.5,
-  "review_count": 6,
+  "rating": 2.8,
+  "review_count": 67,
   "reviews": [
    {
-    "stars": 5,
-    "text": "Thoughtful. Would buy again."
+    "stars": 3,
+    "text": "Works fine, though the instructions could be clearer."
    },
    {
     "stars": 3,
     "text": "Okay overall; mine took longer to arrive than promised."
    },
    {
-    "stars": 5,
-    "text": "Arrived quickly and well made."
+    "stars": 2,
+    "text": "Okay overall; mine took longer to arrive than promised."
    }
   ],
   "synthetic": true,
@@ -14657,7 +14657,7 @@
  },
  {
   "id": "p0284",
-  "name": "Premium olive oil tasting set (Charcoal)",
+  "name": "Olive oil tasting set (Charcoal)",
   "category": "cooking",
   "interests": [
    "cooking",
@@ -14668,7 +14668,7 @@
    "kitchen",
    "no batteries"
   ],
-  "description": "Premium olive oil tasting set (charcoal) for cooking fans. Thoughtfully designed, no batteries needed.",
+  "description": "Olive oil tasting set (charcoal) for cooking fans. Thoughtfully designed, no batteries needed.",
   "price": 175.99,
   "age_min": 14,
   "age_max": 99,
@@ -14969,7 +14969,7 @@
  },
  {
   "id": "p0290",
-  "name": "Forged olive oil tasting set (Charcoal)",
+  "name": "Premium chef knife",
   "category": "cooking",
   "interests": [
    "cooking",
@@ -14978,13 +14978,13 @@
   ],
   "tags": [
    "kitchen",
-   "battery-powered"
+   "no batteries"
   ],
-  "description": "Forged olive oil tasting set (charcoal) for cooking fans. A crowd-pleaser, battery-powered.",
-  "price": 150.99,
+  "description": "Premium chef knife for cooking fans. Made to last, no batteries needed.",
+  "price": 137.99,
   "age_min": 14,
   "age_max": 99,
-  "battery": true,
+  "battery": false,
   "small_parts": false,
   "allergens": [],
   "recipients": [
@@ -15000,20 +15000,20 @@
    "birthday",
    "christmas"
   ],
-  "rating": 4.5,
-  "review_count": 36,
+  "rating": 4.0,
+  "review_count": 23,
   "reviews": [
    {
-    "stars": 5,
-    "text": "Makes weeknight dinners easier. Would buy again."
-   },
-   {
-    "stars": 5,
+    "stars": 4,
     "text": "Arrived quickly and holds up to daily use."
    },
    {
-    "stars": 5,
-    "text": "Bought this as a gift and it was a hit: holds up to daily use."
+    "stars": 3,
+    "text": "A bit pricier than I expected for what it is."
+   },
+   {
+    "stars": 3,
+    "text": "Decent, but the packaging was dented."
    }
   ],
   "synthetic": true,
@@ -15126,7 +15126,7 @@
  },
  {
   "id": "p0293",
-  "name": "Rugged bike lights set (Sage)",
+  "name": "Bike lights set (Sage)",
   "category": "cycling",
   "interests": [
    "cycling",
@@ -15138,7 +15138,7 @@
    "active",
    "battery-powered"
   ],
-  "description": "Rugged bike lights set (sage) for cycling fans. Simple and reliable, battery-powered.",
+  "description": "Bike lights set (sage) for cycling fans. Simple and reliable, battery-powered.",
   "price": 21.99,
   "age_min": 5,
   "age_max": 99,
@@ -15485,7 +15485,7 @@
  },
  {
   "id": "p0300",
-  "name": "Vintage lens cleaning kit (Charcoal)",
+  "name": "Pro instant film pack",
   "category": "photo",
   "interests": [
    "photography",
@@ -15496,8 +15496,8 @@
    "creative",
    "no batteries"
   ],
-  "description": "Vintage lens cleaning kit (charcoal) for photography fans. Thoughtfully designed, no batteries needed.",
-  "price": 92.99,
+  "description": "Pro instant film pack for photography fans. Thoughtfully designed, no batteries needed.",
+  "price": 24.99,
   "age_min": 8,
   "age_max": 99,
   "battery": false,
@@ -15515,20 +15515,20 @@
    "christmas",
    "wedding"
   ],
-  "rating": 4.8,
-  "review_count": 134,
+  "rating": 4.2,
+  "review_count": 611,
   "reviews": [
    {
-    "stars": 4,
-    "text": "Easy to use. Would buy again."
+    "stars": 3,
+    "text": "Decent, but the packaging was dented."
    },
    {
     "stars": 4,
-    "text": "Bought this as a gift and it was a hit: good build."
+    "text": "Honestly better than expected, great memories."
    },
    {
-    "stars": 5,
-    "text": "Easy to use. Would buy again."
+    "stars": 2,
+    "text": "Okay overall; mine took longer to arrive than promised."
    }
   ],
   "synthetic": true,
@@ -15536,7 +15536,7 @@
  },
  {
   "id": "p0301",
-  "name": "Splash badminton set (Sage)",
+  "name": "Badminton set (Sage)",
   "category": "outdoorplay",
   "interests": [
    "outdoor play",
@@ -15548,7 +15548,7 @@
    "active",
    "no batteries"
   ],
-  "description": "Splash badminton set (sage) for outdoor play fans. Thoughtfully designed, no batteries needed.",
+  "description": "Badminton set (sage) for outdoor play fans. Thoughtfully designed, no batteries needed.",
   "price": 7.99,
   "age_min": 3,
   "age_max": 14,
@@ -15944,7 +15944,7 @@
  },
  {
   "id": "p0309",
-  "name": "Crystal bar tool set (Natural)",
+  "name": "Bar tool set (Natural)",
   "category": "cocktails",
   "interests": [
    "cocktails",
@@ -15956,7 +15956,7 @@
    "entertaining",
    "no batteries"
   ],
-  "description": "Crystal bar tool set (natural) for cocktails fans. Simple and reliable, no batteries needed.",
+  "description": "Bar tool set (natural) for cocktails fans. Simple and reliable, no batteries needed.",
   "price": 15.99,
   "age_min": 21,
   "age_max": 99,
@@ -16366,7 +16366,7 @@
  },
  {
   "id": "p0317",
-  "name": "Vintage photo album",
+  "name": "Vintage photo album (Blue)",
   "category": "photo",
   "interests": [
    "photography",
@@ -16377,8 +16377,8 @@
    "creative",
    "battery-powered"
   ],
-  "description": "Vintage photo album for photography fans. Thoughtfully designed, battery-powered.",
-  "price": 104.99,
+  "description": "Vintage photo album (blue) for photography fans. Thoughtfully designed, battery-powered.",
+  "price": 12.99,
   "age_min": 8,
   "age_max": 99,
   "battery": true,
@@ -16396,12 +16396,12 @@
    "christmas",
    "wedding"
   ],
-  "rating": 4.1,
-  "review_count": 308,
+  "rating": 4.6,
+  "review_count": 743,
   "reviews": [
    {
-    "stars": 3,
-    "text": "Okay overall; mine took longer to arrive than promised."
+    "stars": 4,
+    "text": "Arrived quickly and easy to use."
    },
    {
     "stars": 5,
@@ -16417,7 +16417,7 @@
  },
  {
   "id": "p0318",
-  "name": "Starter fly-fishing starter kit",
+  "name": "Fly-fishing starter kit",
   "category": "fishing",
   "interests": [
    "fishing",
@@ -16427,7 +16427,7 @@
    "outdoors",
    "no batteries"
   ],
-  "description": "Starter fly-fishing starter kit for fishing fans. Made to last, no batteries needed.",
+  "description": "Fly-fishing starter kit for fishing fans. Made to last, no batteries needed.",
   "price": 71.99,
   "age_min": 6,
   "age_max": 99,
@@ -16674,7 +16674,7 @@
  },
  {
   "id": "p0323",
-  "name": "Cozy cozy reading pillow",
+  "name": "Cozy reading pillow",
   "category": "reading",
   "interests": [
    "reading",
@@ -16686,7 +16686,7 @@
    "indoor",
    "no batteries"
   ],
-  "description": "Cozy cozy reading pillow for reading fans. Thoughtfully designed, no batteries needed.",
+  "description": "Cozy reading pillow for reading fans. Thoughtfully designed, no batteries needed.",
   "price": 63.99,
   "age_min": 8,
   "age_max": 99,
@@ -16887,7 +16887,7 @@
  },
  {
   "id": "p0327",
-  "name": "Smart tablet stand",
+  "name": "Smart plug set (Navy)",
   "category": "tech",
   "interests": [
    "tech",
@@ -16899,8 +16899,8 @@
    "needs batteries",
    "battery-powered"
   ],
-  "description": "Smart tablet stand for tech fans. Thoughtfully designed, battery-powered.",
-  "price": 113.99,
+  "description": "Smart plug set (navy) for tech fans. Made to last, battery-powered.",
+  "price": 20.99,
   "age_min": 12,
   "age_max": 99,
   "battery": true,
@@ -16918,19 +16918,19 @@
    "christmas",
    "father's day"
   ],
-  "rating": 4.0,
-  "review_count": 85,
+  "rating": 3.6,
+  "review_count": 2281,
   "reviews": [
    {
     "stars": 3,
-    "text": "Okay overall; mine took longer to arrive than promised."
+    "text": "Decent, but the packaging was dented."
    },
    {
     "stars": 5,
-    "text": "Arrived quickly and works as described."
+    "text": "Arrived quickly and reliable."
    },
    {
-    "stars": 3,
+    "stars": 2,
     "text": "Okay overall; mine took longer to arrive than promised."
    }
   ],
@@ -17304,7 +17304,7 @@
  },
  {
   "id": "p0335",
-  "name": "Slim smart plug set (Rose)",
+  "name": "Fast wireless charger",
   "category": "tech",
   "interests": [
    "tech",
@@ -17316,8 +17316,8 @@
    "needs batteries",
    "battery-powered"
   ],
-  "description": "Slim smart plug set (rose) for tech fans. Thoughtfully designed, battery-powered.",
-  "price": 49.99,
+  "description": "Fast wireless charger for tech fans. A crowd-pleaser, battery-powered.",
+  "price": 66.99,
   "age_min": 12,
   "age_max": 99,
   "battery": true,
@@ -17336,19 +17336,19 @@
    "father's day"
   ],
   "rating": 4.9,
-  "review_count": 18,
+  "review_count": 57,
   "reviews": [
    {
     "stars": 4,
-    "text": "Setup took a minute. Would buy again."
-   },
-   {
-    "stars": 4,
-    "text": "Bought this as a gift and it was a hit: works as described."
+    "text": "Arrived quickly and setup took a minute."
    },
    {
     "stars": 5,
-    "text": "Honestly better than expected, reliable."
+    "text": "Honestly better than expected, setup took a minute."
+   },
+   {
+    "stars": 2,
+    "text": "A bit pricier than I expected for what it is."
    }
   ],
   "synthetic": true,
@@ -18195,7 +18195,7 @@
  },
  {
   "id": "p0352",
-  "name": "Slim phone tripod (Rose)",
+  "name": "Fast phone tripod",
   "category": "tech",
   "interests": [
    "tech",
@@ -18207,8 +18207,8 @@
    "needs batteries",
    "battery-powered"
   ],
-  "description": "Slim phone tripod (rose) for tech fans. Simple and reliable, battery-powered.",
-  "price": 35.99,
+  "description": "Fast phone tripod for tech fans. Made to last, battery-powered.",
+  "price": 40.99,
   "age_min": 12,
   "age_max": 99,
   "battery": true,
@@ -18226,20 +18226,20 @@
    "christmas",
    "father's day"
   ],
-  "rating": 4.4,
-  "review_count": 78,
+  "rating": 4.3,
+  "review_count": 31,
   "reviews": [
    {
+    "stars": 4,
+    "text": "Works as described. Would buy again."
+   },
+   {
     "stars": 5,
-    "text": "Reliable. Would buy again."
+    "text": "Works as described. Would buy again."
    },
    {
     "stars": 5,
     "text": "Honestly better than expected, works as described."
-   },
-   {
-    "stars": 3,
-    "text": "Works fine, though the instructions could be clearer."
    }
   ],
   "synthetic": true,
@@ -19235,7 +19235,7 @@
  },
  {
   "id": "p0372",
-  "name": "Wooden wooden shape sorter",
+  "name": "Soft push walker (Charcoal)",
   "category": "toddler",
   "interests": [
    "toddler",
@@ -19247,8 +19247,8 @@
    "early learning",
    "no batteries"
   ],
-  "description": "Wooden wooden shape sorter for toddler fans. Thoughtfully designed, no batteries needed.",
-  "price": 7.49,
+  "description": "Soft push walker (charcoal) for toddler fans. A crowd-pleaser, no batteries needed.",
+  "price": 8.99,
   "age_min": 3,
   "age_max": 4,
   "battery": false,
@@ -19265,16 +19265,16 @@
    "baby shower",
    "christmas"
   ],
-  "rating": 4.3,
-  "review_count": 173,
+  "rating": 4.4,
+  "review_count": 52,
   "reviews": [
    {
-    "stars": 3,
-    "text": "Works fine, though the instructions could be clearer."
+    "stars": 4,
+    "text": "Bought this as a gift and it was a hit: calming."
    },
    {
     "stars": 4,
-    "text": "Perfect size for small hands. Would buy again."
+    "text": "Survived the throwing phase. Would buy again."
    },
    {
     "stars": 5,
@@ -20277,7 +20277,7 @@
  },
  {
   "id": "p0392",
-  "name": "Hydrating gua sha set (Natural)",
+  "name": "Gua sha set (Natural)",
   "category": "selfcare",
   "interests": [
    "skincare",
@@ -20290,7 +20290,7 @@
    "health",
    "no batteries"
   ],
-  "description": "Hydrating gua sha set (natural) for skincare fans. A crowd-pleaser, no batteries needed.",
+  "description": "Gua sha set (natural) for skincare fans. A crowd-pleaser, no batteries needed.",
   "price": 33.99,
   "age_min": 12,
   "age_max": 99,
@@ -20694,7 +20694,7 @@
  },
  {
   "id": "p0400",
-  "name": "Beginner beginner knitting kit (Charcoal)",
+  "name": "Beginner knitting kit (Charcoal)",
   "category": "crafts",
   "interests": [
    "crafts",
@@ -20707,7 +20707,7 @@
    "calm",
    "no batteries"
   ],
-  "description": "Beginner beginner knitting kit (charcoal) for crafts fans. Made to last, no batteries needed.",
+  "description": "Beginner knitting kit (charcoal) for crafts fans. Made to last, no batteries needed.",
   "price": 13.99,
   "age_min": 7,
   "age_max": 99,
@@ -21465,7 +21465,7 @@
  },
  {
   "id": "p0415",
-  "name": "Deluxe watercolor set (Charcoal)",
+  "name": "Watercolor set (Charcoal)",
   "category": "art",
   "interests": [
    "art",
@@ -21477,7 +21477,7 @@
    "creative",
    "no batteries"
   ],
-  "description": "Deluxe watercolor set (charcoal) for art fans. Simple and reliable, no batteries needed.",
+  "description": "Watercolor set (charcoal) for art fans. Simple and reliable, no batteries needed.",
   "price": 65.99,
   "age_min": 5,
   "age_max": 99,
@@ -21777,7 +21777,7 @@
  },
  {
   "id": "p0421",
-  "name": "Artist watercolor set (Rose)",
+  "name": "Watercolor set (Rose)",
   "category": "art",
   "interests": [
    "art",
@@ -21789,7 +21789,7 @@
    "creative",
    "no batteries"
   ],
-  "description": "Artist watercolor set (rose) for art fans. Made to last, no batteries needed.",
+  "description": "Watercolor set (rose) for art fans. Made to last, no batteries needed.",
   "price": 19.99,
   "age_min": 5,
   "age_max": 99,
@@ -22448,7 +22448,7 @@
  },
  {
   "id": "p0434",
-  "name": "Starter fly-fishing starter kit (Natural)",
+  "name": "Fly-fishing starter kit (Natural)",
   "category": "fishing",
   "interests": [
    "fishing",
@@ -22458,7 +22458,7 @@
    "outdoors",
    "no batteries"
   ],
-  "description": "Starter fly-fishing starter kit (natural) for fishing fans. Made to last, no batteries needed.",
+  "description": "Fly-fishing starter kit (natural) for fishing fans. Made to last, no batteries needed.",
   "price": 38.99,
   "age_min": 6,
   "age_max": 99,
@@ -22497,7 +22497,7 @@
  },
  {
   "id": "p0435",
-  "name": "Sturdy feather wand set (Charcoal)",
+  "name": "Feather wand set (Charcoal)",
   "category": "cat",
   "interests": [
    "cats",
@@ -22508,7 +22508,7 @@
    "pets",
    "no batteries"
   ],
-  "description": "Sturdy feather wand set (charcoal) for cats fans. Made to last, no batteries needed.",
+  "description": "Feather wand set (charcoal) for cats fans. Made to last, no batteries needed.",
   "price": 7.49,
   "age_min": 0,
   "age_max": 99,
@@ -22747,7 +22747,7 @@
  },
  {
   "id": "p0440",
-  "name": "Compact mini tripod (Rose)",
+  "name": "Vintage photo printer",
   "category": "photo",
   "interests": [
    "photography",
@@ -22758,8 +22758,8 @@
    "creative",
    "no batteries"
   ],
-  "description": "Compact mini tripod (rose) for photography fans. Made to last, no batteries needed.",
-  "price": 13.99,
+  "description": "Vintage photo printer for photography fans. A crowd-pleaser, no batteries needed.",
+  "price": 103.99,
   "age_min": 8,
   "age_max": 99,
   "battery": false,
@@ -22777,20 +22777,20 @@
    "christmas",
    "wedding"
   ],
-  "rating": 2.8,
-  "review_count": 31,
+  "rating": 4.4,
+  "review_count": 10,
   "reviews": [
    {
-    "stars": 3,
-    "text": "Okay overall; mine took longer to arrive than promised."
-   },
-   {
-    "stars": 4,
+    "stars": 5,
     "text": "Arrived quickly and great memories."
    },
    {
-    "stars": 2,
-    "text": "A bit pricier than I expected for what it is."
+    "stars": 5,
+    "text": "Great memories. Would buy again."
+   },
+   {
+    "stars": 3,
+    "text": "Okay overall; mine took longer to arrive than promised."
    }
   ],
   "synthetic": true,
@@ -22798,7 +22798,7 @@
  },
  {
   "id": "p0441",
-  "name": "Cozy leather bookmark set",
+  "name": "Leather bookends",
   "category": "reading",
   "interests": [
    "reading",
@@ -22810,8 +22810,8 @@
    "indoor",
    "no batteries"
   ],
-  "description": "Cozy leather bookmark set for reading fans. Thoughtfully designed, no batteries needed.",
-  "price": 9.49,
+  "description": "Leather bookends for reading fans. Thoughtfully designed, no batteries needed.",
+  "price": 51.99,
   "age_min": 8,
   "age_max": 99,
   "battery": false,
@@ -22829,8 +22829,8 @@
    "christmas",
    "thank you"
   ],
-  "rating": 4.1,
-  "review_count": 24,
+  "rating": 4.7,
+  "review_count": 676,
   "reviews": [
    {
     "stars": 5,
@@ -22841,8 +22841,8 @@
     "text": "Works fine, though the instructions could be clearer."
    },
    {
-    "stars": 3,
-    "text": "Works fine, though the instructions could be clearer."
+    "stars": 5,
+    "text": "Honestly better than expected, thoughtful."
    }
   ],
   "synthetic": true,
@@ -22955,7 +22955,7 @@
  },
  {
   "id": "p0444",
-  "name": "Retro gaming headset (Blue)",
+  "name": "Gaming headset (Blue)",
   "category": "gaming",
   "interests": [
    "gaming",
@@ -22967,7 +22967,7 @@
    "screen",
    "battery-powered"
   ],
-  "description": "Retro gaming headset (blue) for gaming fans. Thoughtfully designed, battery-powered.",
+  "description": "Gaming headset (blue) for gaming fans. Thoughtfully designed, battery-powered.",
   "price": 160.99,
   "age_min": 7,
   "age_max": 99,
@@ -23109,7 +23109,7 @@
  },
  {
   "id": "p0447",
-  "name": "Beginner beginner knitting kit",
+  "name": "Beginner knitting kit",
   "category": "crafts",
   "interests": [
    "crafts",
@@ -23122,7 +23122,7 @@
    "calm",
    "no batteries"
   ],
-  "description": "Beginner beginner knitting kit for crafts fans. Simple and reliable, no batteries needed.",
+  "description": "Beginner knitting kit for crafts fans. Simple and reliable, no batteries needed.",
   "price": 12.99,
   "age_min": 7,
   "age_max": 99,
@@ -23577,7 +23577,7 @@
  },
  {
   "id": "p0456",
-  "name": "Leather bookmark set",
+  "name": "Leather bookmark set (Natural)",
   "category": "reading",
   "interests": [
    "reading",
@@ -23589,8 +23589,8 @@
    "indoor",
    "no batteries"
   ],
-  "description": "Leather bookmark set for reading fans. Thoughtfully designed, no batteries needed.",
-  "price": 9.49,
+  "description": "Leather bookmark set (natural) for reading fans. Simple and reliable, no batteries needed.",
+  "price": 45.99,
   "age_min": 8,
   "age_max": 99,
   "battery": false,
@@ -23608,20 +23608,20 @@
    "christmas",
    "thank you"
   ],
-  "rating": 3.6,
-  "review_count": 229,
+  "rating": 4.7,
+  "review_count": 6,
   "reviews": [
    {
     "stars": 5,
-    "text": "Honestly better than expected, thoughtful."
+    "text": "Thoughtful. Would buy again."
    },
    {
     "stars": 5,
     "text": "Perfect for bedtime reading. Would buy again."
    },
    {
-    "stars": 5,
-    "text": "Bought this as a gift and it was a hit: perfect for bedtime reading."
+    "stars": 2,
+    "text": "A bit pricier than I expected for what it is."
    }
   ],
   "synthetic": true,
@@ -23729,7 +23729,7 @@
  },
  {
   "id": "p0459",
-  "name": "Compact lens cleaning kit",
+  "name": "Compact photo printer",
   "category": "photo",
   "interests": [
    "photography",
@@ -23738,13 +23738,13 @@
   ],
   "tags": [
    "creative",
-   "no batteries"
+   "battery-powered"
   ],
-  "description": "Compact lens cleaning kit for photography fans. A crowd-pleaser, no batteries needed.",
-  "price": 14.99,
+  "description": "Compact photo printer for photography fans. Made to last, battery-powered.",
+  "price": 43.99,
   "age_min": 8,
   "age_max": 99,
-  "battery": false,
+  "battery": true,
   "small_parts": false,
   "allergens": [],
   "recipients": [
@@ -23759,20 +23759,20 @@
    "christmas",
    "wedding"
   ],
-  "rating": 4.0,
-  "review_count": 4,
+  "rating": 4.7,
+  "review_count": 3,
   "reviews": [
    {
-    "stars": 3,
-    "text": "Decent, but the packaging was dented."
-   },
-   {
-    "stars": 4,
-    "text": "Honestly better than expected, great memories."
+    "stars": 5,
+    "text": "Honestly better than expected, easy to use."
    },
    {
     "stars": 5,
-    "text": "Honestly better than expected, good build."
+    "text": "Arrived quickly and easy to use."
+   },
+   {
+    "stars": 5,
+    "text": "Arrived quickly and easy to use."
    }
   ],
   "synthetic": true,
@@ -23789,13 +23789,13 @@
   ],
   "tags": [
    "creative",
-   "no batteries"
+   "battery-powered"
   ],
-  "description": "Vintage lens cleaning kit for photography fans. A crowd-pleaser, no batteries needed.",
-  "price": 25.99,
+  "description": "Vintage lens cleaning kit for photography fans. Simple and reliable, battery-powered.",
+  "price": 31.99,
   "age_min": 8,
   "age_max": 99,
-  "battery": false,
+  "battery": true,
   "small_parts": false,
   "allergens": [],
   "recipients": [
@@ -23811,19 +23811,19 @@
    "wedding"
   ],
   "rating": 4.4,
-  "review_count": 1282,
+  "review_count": 6,
   "reviews": [
    {
     "stars": 3,
-    "text": "Works fine, though the instructions could be clearer."
+    "text": "A bit pricier than I expected for what it is."
+   },
+   {
+    "stars": 5,
+    "text": "Honestly better than expected, good build."
    },
    {
     "stars": 4,
     "text": "Honestly better than expected, easy to use."
-   },
-   {
-    "stars": 4,
-    "text": "Good build. Would buy again."
    }
   ],
   "synthetic": true,
@@ -24037,7 +24037,7 @@
  },
  {
   "id": "p0465",
-  "name": "Family badminton set (Charcoal)",
+  "name": "Badminton set (Charcoal)",
   "category": "outdoorplay",
   "interests": [
    "outdoor play",
@@ -24049,7 +24049,7 @@
    "active",
    "no batteries"
   ],
-  "description": "Family badminton set (charcoal) for outdoor play fans. Simple and reliable, no batteries needed.",
+  "description": "Badminton set (charcoal) for outdoor play fans. Simple and reliable, no batteries needed.",
   "price": 21.99,
   "age_min": 3,
   "age_max": 14,
@@ -24087,7 +24087,7 @@
  },
  {
   "id": "p0466",
-  "name": "Gourmet gourmet popcorn tin",
+  "name": "Gourmet popcorn tin",
   "category": "snacks",
   "interests": [
    "snacks",
@@ -24101,7 +24101,7 @@
    "nut-free",
    "no batteries"
   ],
-  "description": "Gourmet gourmet popcorn tin for snacks fans. Made to last, no batteries needed.",
+  "description": "Gourmet popcorn tin for snacks fans. Made to last, no batteries needed.",
   "price": 47.99,
   "age_min": 4,
   "age_max": 99,
@@ -24548,7 +24548,7 @@
  },
  {
   "id": "p0475",
-  "name": "Gentle face mask set (Natural)",
+  "name": "Face mask set (Natural)",
   "category": "selfcare",
   "interests": [
    "skincare",
@@ -24562,7 +24562,7 @@
    "fragrance-free",
    "no batteries"
   ],
-  "description": "Gentle face mask set (natural) for skincare fans. Simple and reliable, no batteries needed.",
+  "description": "Face mask set (natural) for skincare fans. Simple and reliable, no batteries needed.",
   "price": 12.99,
   "age_min": 12,
   "age_max": 99,
@@ -24811,7 +24811,7 @@
  },
  {
   "id": "p0480",
-  "name": "Compact photo printer",
+  "name": "Pro photo album",
   "category": "photo",
   "interests": [
    "photography",
@@ -24820,13 +24820,13 @@
   ],
   "tags": [
    "creative",
-   "battery-powered"
+   "no batteries"
   ],
-  "description": "Compact photo printer for photography fans. Made to last, battery-powered.",
-  "price": 31.99,
+  "description": "Pro photo album for photography fans. Made to last, no batteries needed.",
+  "price": 63.99,
   "age_min": 8,
   "age_max": 99,
-  "battery": true,
+  "battery": false,
   "small_parts": false,
   "allergens": [],
   "recipients": [
@@ -24841,20 +24841,20 @@
    "christmas",
    "wedding"
   ],
-  "rating": 4.7,
-  "review_count": 67,
+  "rating": 3.7,
+  "review_count": 293,
   "reviews": [
    {
-    "stars": 5,
-    "text": "Great memories. Would buy again."
+    "stars": 4,
+    "text": "Honestly better than expected, good build."
    },
    {
-    "stars": 5,
-    "text": "Arrived quickly and great memories."
+    "stars": 3,
+    "text": "Decent, but the packaging was dented."
    },
    {
     "stars": 4,
-    "text": "Honestly better than expected, great memories."
+    "text": "Bought this as a gift and it was a hit: great memories."
    }
   ],
   "synthetic": true,
@@ -25180,7 +25180,7 @@
  },
  {
   "id": "p0487",
-  "name": "Compact photo album",
+  "name": "Pro camera strap (Natural)",
   "category": "photo",
   "interests": [
    "photography",
@@ -25191,7 +25191,7 @@
    "creative",
    "no batteries"
   ],
-  "description": "Compact photo album for photography fans. A crowd-pleaser, no batteries needed.",
+  "description": "Pro camera strap (natural) for photography fans. A crowd-pleaser, no batteries needed.",
   "price": 25.99,
   "age_min": 8,
   "age_max": 99,
@@ -25437,7 +25437,7 @@
  },
  {
   "id": "p0492",
-  "name": "Vintage mini tripod",
+  "name": "Pro lens cleaning kit",
   "category": "photo",
   "interests": [
    "photography",
@@ -25448,8 +25448,8 @@
    "creative",
    "battery-powered"
   ],
-  "description": "Vintage mini tripod for photography fans. Thoughtfully designed, battery-powered.",
-  "price": 36.99,
+  "description": "Pro lens cleaning kit for photography fans. Simple and reliable, battery-powered.",
+  "price": 12.99,
   "age_min": 8,
   "age_max": 99,
   "battery": true,
@@ -25467,20 +25467,20 @@
    "christmas",
    "wedding"
   ],
-  "rating": 4.1,
-  "review_count": 12,
+  "rating": 3.9,
+  "review_count": 917,
   "reviews": [
    {
     "stars": 5,
-    "text": "Honestly better than expected, great memories."
+    "text": "Bought this as a gift and it was a hit: easy to use."
    },
    {
     "stars": 5,
-    "text": "Great memories. Would buy again."
+    "text": "Good build. Would buy again."
    },
    {
-    "stars": 3,
-    "text": "Okay overall; mine took longer to arrive than promised."
+    "stars": 5,
+    "text": "Bought this as a gift and it was a hit: great memories."
    }
   ],
   "synthetic": true,
@@ -25592,7 +25592,7 @@
  },
  {
   "id": "p0495",
-  "name": "Compact precision screwdriver set (Blue)",
+  "name": "Precision screwdriver set (Blue)",
   "category": "tools",
   "interests": [
    "woodworking",
@@ -25604,7 +25604,7 @@
    "workshop",
    "no batteries"
   ],
-  "description": "Compact precision screwdriver set (blue) for woodworking fans. Simple and reliable, no batteries needed.",
+  "description": "Precision screwdriver set (blue) for woodworking fans. Simple and reliable, no batteries needed.",
   "price": 48.99,
   "age_min": 14,
   "age_max": 99,
@@ -26161,7 +26161,7 @@
  },
  {
   "id": "p0506",
-  "name": "Family badminton set (Natural)",
+  "name": "Badminton set (Natural)",
   "category": "outdoorplay",
   "interests": [
    "outdoor play",
@@ -26173,7 +26173,7 @@
    "active",
    "no batteries"
   ],
-  "description": "Family badminton set (natural) for outdoor play fans. Simple and reliable, no batteries needed.",
+  "description": "Badminton set (natural) for outdoor play fans. Simple and reliable, no batteries needed.",
   "price": 18.99,
   "age_min": 3,
   "age_max": 14,
@@ -26262,7 +26262,7 @@
  },
  {
   "id": "p0508",
-  "name": "Minimal floating shelf set (Sage)",
+  "name": "Floating shelf set (Sage)",
   "category": "bathroom",
   "interests": [
    "home",
@@ -26274,7 +26274,7 @@
    "decor",
    "no batteries"
   ],
-  "description": "Minimal floating shelf set (sage) for home fans. Simple and reliable, no batteries needed.",
+  "description": "Floating shelf set (sage) for home fans. Simple and reliable, no batteries needed.",
   "price": 20.99,
   "age_min": 12,
   "age_max": 99,
@@ -26781,7 +26781,7 @@
  },
  {
   "id": "p0518",
-  "name": "Creative brick building set (Charcoal)",
+  "name": "Brick building set (Charcoal)",
   "category": "building",
   "interests": [
    "building",
@@ -26794,7 +26794,7 @@
    "stem",
    "no batteries"
   ],
-  "description": "Creative brick building set (charcoal) for building fans. A crowd-pleaser, no batteries needed.",
+  "description": "Brick building set (charcoal) for building fans. A crowd-pleaser, no batteries needed.",
   "price": 83.99,
   "age_min": 4,
   "age_max": 99,
@@ -27462,7 +27462,7 @@
  },
  {
   "id": "p0531",
-  "name": "Creative wooden construction set (Sage)",
+  "name": "Wooden construction set (Sage)",
   "category": "building",
   "interests": [
    "building",
@@ -27475,7 +27475,7 @@
    "stem",
    "no batteries"
   ],
-  "description": "Creative wooden construction set (sage) for building fans. A crowd-pleaser, no batteries needed.",
+  "description": "Wooden construction set (sage) for building fans. A crowd-pleaser, no batteries needed.",
   "price": 127.99,
   "age_min": 4,
   "age_max": 99,
@@ -27513,7 +27513,7 @@
  },
  {
   "id": "p0532",
-  "name": "Cozy cozy reading pillow (Natural)",
+  "name": "Cozy reading pillow (Natural)",
   "category": "reading",
   "interests": [
    "reading",
@@ -27525,7 +27525,7 @@
    "indoor",
    "battery-powered"
   ],
-  "description": "Cozy cozy reading pillow (natural) for reading fans. Thoughtfully designed, battery-powered.",
+  "description": "Cozy reading pillow (natural) for reading fans. Thoughtfully designed, battery-powered.",
   "price": 69.99,
   "age_min": 8,
   "age_max": 99,
@@ -28182,7 +28182,7 @@
  },
  {
   "id": "p0545",
-  "name": "Scandinavian floating shelf set (Natural)",
+  "name": "Floating shelf set (Natural)",
   "category": "bathroom",
   "interests": [
    "home",
@@ -28194,7 +28194,7 @@
    "decor",
    "no batteries"
   ],
-  "description": "Scandinavian floating shelf set (natural) for home fans. Simple and reliable, no batteries needed.",
+  "description": "Floating shelf set (natural) for home fans. Simple and reliable, no batteries needed.",
   "price": 11.99,
   "age_min": 12,
   "age_max": 99,
@@ -28233,7 +28233,7 @@
  },
  {
   "id": "p0546",
-  "name": "Classic cocktail shaker set (Natural)",
+  "name": "Cocktail shaker set (Natural)",
   "category": "cocktails",
   "interests": [
    "cocktails",
@@ -28245,7 +28245,7 @@
    "entertaining",
    "no batteries"
   ],
-  "description": "Classic cocktail shaker set (natural) for cocktails fans. Made to last, no batteries needed.",
+  "description": "Cocktail shaker set (natural) for cocktails fans. Made to last, no batteries needed.",
   "price": 25.99,
   "age_min": 21,
   "age_max": 99,
@@ -30732,7 +30732,7 @@
  },
  {
   "id": "p0594",
-  "name": "Rugged bike lights set (Blue)",
+  "name": "Bike lights set (Blue)",
   "category": "cycling",
   "interests": [
    "cycling",
@@ -30744,7 +30744,7 @@
    "active",
    "battery-powered"
   ],
-  "description": "Rugged bike lights set (blue) for cycling fans. Thoughtfully designed, battery-powered.",
+  "description": "Bike lights set (blue) for cycling fans. Thoughtfully designed, battery-powered.",
   "price": 15.99,
   "age_min": 5,
   "age_max": 99,

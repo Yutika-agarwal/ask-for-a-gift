@@ -1,0 +1,19 @@
+{
+  "name": "ask-for-a-gift",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "catalog": "python3 scripts/gen_catalog.py",
+    "eval": "node eval/run.mjs",
+    "eval:llm": "node eval/run.mjs --llm",
+    "test": "node eval/guardrails.mjs"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0"
+  }
+}

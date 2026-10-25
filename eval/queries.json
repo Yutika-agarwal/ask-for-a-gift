@@ -1,0 +1,62 @@
+{
+  "_about": "50 queries with graded relevance SPECS written for review. Labels are derived from the spec (category grades 0-3 plus hard constraints) applied to the SYNTHETIC catalog's structured fields. Edit any grade or constraint here and re-run `npm run eval`; qrels are regenerated.",
+  "_grades": "3 = ideal, 2 = good, 1 = acceptable, 0 = not relevant. Any hard-constraint violation (budget, age safety, battery, small parts, allergen, excluded category/word) forces grade 0.",
+  "queries": [
+    {"id":"q01","type":"simple","query":"coffee lover gift","grades":{"coffee":3,"tea":1}},
+    {"id":"q02","type":"simple","query":"gift for a gardener","grades":{"gardening":3}},
+    {"id":"q03","type":"simple","query":"board games for family night","grades":{"boardgames":3,"puzzles":1}},
+    {"id":"q04","type":"simple","query":"present for someone who loves hiking","grades":{"hiking":3,"camping":2,"fishing":1}},
+    {"id":"q05","type":"simple","query":"gift for a dog owner","grades":{"dog":3}},
+    {"id":"q06","type":"simple","query":"yoga or fitness gift for my sister","grades":{"fitness":3,"running":1,"selfcare":1}},
+    {"id":"q07","type":"simple","query":"knitting kit for grandma","grades":{"crafts":3,"cozy":1}},
+    {"id":"q08","type":"simple","query":"fun gift for a cyclist","grades":{"cycling":3,"sports":1,"running":1}},
+
+    {"id":"q09","type":"multi","query":"dad who loves fishing and camping","grades":{"fishing":3,"camping":3,"hiking":1,"tools":1}},
+    {"id":"q10","type":"multi","query":"friend who likes cooking and wine","grades":{"cooking":3,"cocktails":3,"baking":2},"age":30},
+    {"id":"q11","type":"multi","query":"teen into music and gaming","grades":{"music":3,"gaming":3,"audio":2},"age":15},
+    {"id":"q12","type":"multi","query":"mom who enjoys reading and tea","grades":{"reading":3,"tea":3,"cozy":1,"stationery":1}},
+    {"id":"q13","type":"multi","query":"sister who loves art and journaling","grades":{"art":3,"stationery":3,"crafts":2}},
+    {"id":"q14","type":"multi","query":"someone into photography and travel","grades":{"photo":3,"travel":3}},
+
+    {"id":"q15","type":"budget","query":"coffee gift under $25","grades":{"coffee":3,"tea":1},"max_price":25},
+    {"id":"q16","type":"budget","query":"gardening gift between $20 and $40","grades":{"gardening":3},"min_price":20,"max_price":40},
+    {"id":"q17","type":"budget","query":"gift for a runner, up to $30","grades":{"running":3,"fitness":1},"max_price":30},
+    {"id":"q18","type":"budget","query":"cheap stocking stuffer for a cat lover","grades":{"cat":3},"max_price":25},
+    {"id":"q19","type":"budget","query":"board game under 20 bucks","grades":{"boardgames":3,"puzzles":1},"max_price":20},
+    {"id":"q20","type":"budget","query":"around $50 for a hiking dad","grades":{"hiking":3,"camping":1},"min_price":30,"max_price":65},
+    {"id":"q21","type":"budget","query":"splurge on headphones for my brother","grades":{"audio":3,"music":1},"min_price":100},
+
+    {"id":"q22","type":"negation","query":"a reading gift with no batteries","grades":{"reading":3,"stationery":1},"no_battery":true},
+    {"id":"q23","type":"negation","query":"music gift for a teenager, nothing with batteries or screens","grades":{"music":3,"audio":1},"age":15,"no_battery":true,"exclude_categories":["gaming"]},
+    {"id":"q24","type":"negation","query":"gift for a coffee drinker but not a mug","grades":{"coffee":3,"tea":1},"exclude_name_words":["mug"]},
+    {"id":"q25","type":"negation","query":"cozy gift for mom, no candles","grades":{"cozy":3,"selfcare":1},"exclude_name_words":["candle"]},
+    {"id":"q26","type":"negation","query":"kitchen gift for my friend, no alcohol","grades":{"cooking":3,"baking":2,"snacks":1},"exclude_categories":["cocktails"]},
+    {"id":"q27","type":"negation","query":"hobby gift for grandpa that isn't a board game or puzzle","grades":{"crafts":2,"art":2,"fishing":3,"gardening":3},"age":72,"exclude_categories":["boardgames","puzzles"]},
+    {"id":"q28","type":"negation","query":"outdoorsy gift without anything that needs charging","grades":{"hiking":3,"camping":3,"fishing":2},"no_battery":true},
+
+    {"id":"q29","type":"safety","query":"soft toy for my 3 year old, no small parts","grades":{"plush":3,"toddler":3,"puzzles":1},"age":3,"no_small_parts":true},
+    {"id":"q30","type":"safety","query":"gift for a 2 year old who loves stuffed animals","grades":{"plush":3,"toddler":2},"age":2},
+    {"id":"q31","type":"safety","query":"6 year old who loves building things","grades":{"building":3,"science":2},"age":6},
+    {"id":"q32","type":"safety","query":"nut allergy: snack gift for a teacher","grades":{"snacks":3,"teacher":1},"allergen_free":["nuts"]},
+    {"id":"q33","type":"safety","query":"gluten free baking gift for my friend","grades":{"baking":3,"cooking":1},"allergen_free":["gluten"]},
+    {"id":"q34","type":"safety","query":"fragrance-free self care for my mom","grades":{"selfcare":3,"cozy":1},"allergen_free":["fragrance"]},
+    {"id":"q35","type":"safety","query":"gift for a 10 year old into science, no batteries","grades":{"science":3,"building":2},"age":10,"no_battery":true},
+
+    {"id":"q36","type":"misspelling","query":"cofee gift for my dad","grades":{"coffee":3,"tea":1}},
+    {"id":"q37","type":"misspelling","query":"gardning tools for grandma","grades":{"gardening":3,"tools":1}},
+    {"id":"q38","type":"misspelling","query":"hikng gear for my brother","grades":{"hiking":3,"camping":2}},
+    {"id":"q39","type":"misspelling","query":"board gams for the family","grades":{"boardgames":3,"puzzles":1}},
+    {"id":"q40","type":"misspelling","query":"yoga mat for my sistr","grades":{"fitness":3,"selfcare":1}},
+    {"id":"q41","type":"misspelling","query":"photografy gift for a friend","grades":{"photo":3,"travel":1}},
+    {"id":"q42","type":"misspelling","query":"jewlery for my girlfriend","grades":{"jewelry":3}},
+
+    {"id":"q43","type":"clarify","query":"something nice for my mom","expect":"clarify","recipient_only":"mom"},
+    {"id":"q44","type":"clarify","query":"gift","expect":"clarify"},
+    {"id":"q45","type":"clarify","query":"present for my boss","expect":"clarify","recipient_only":"coworker"},
+    {"id":"q46","type":"clarify","query":"a surprise for my girlfriend","expect":"clarify","recipient_only":"partner"},
+    {"id":"q47","type":"clarify","query":"I need an idea","expect":"clarify"},
+    {"id":"q48","type":"clarify","query":"something for a 7 year old","expect":"clarify","recipient_only":"kid","age":7},
+    {"id":"q49","type":"clarify","query":"teen who likes gaming, no screens","expect":"clarify","grades":{"gaming":3},"age":15,"no_battery":false,"exclude_categories":["gaming"]},
+    {"id":"q50","type":"clarify","query":"reading gift for dad, no books","expect":"clarify","grades":{"reading":3}}
+  ]
+}

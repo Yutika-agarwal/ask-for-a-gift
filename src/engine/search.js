@@ -149,7 +149,7 @@ function retrievalQuery(u) {
  * Full product pipeline. `feedback` is {category: +1/-1 votes} from thumbs.
  * Returns {u, results, excludedCount, candidateCount}
  */
-export function search(index, query, { k = 10, understanding = null, feedback = {}, perCategory = 3 } = {}) {
+export function search(index, query, { k = 10, understanding = null, feedback = {}, perCategory = 10 } = {}) {
   const u = understanding || understand(query, index.ctx);
   if (u.clarify) return { u, results: [], excludedCount: 0, candidateCount: 0, needsClarification: true };
 
@@ -185,11 +185,15 @@ export function search(index, query, { k = 10, understanding = null, feedback = 
   });
   ranked.sort((a, b) => b.score - a.score || b.p.review_count - a.p.review_count);
 
-  // diversity: at most `perCategory` per category in the page
-  const out = [], per = {};
+  // De-duplicate colour/variant listings ("Matte milk frother (Sage)") so one product family shows once,
+  // and optionally cap how many results share a category.
+  const out = [], per = {}, seenBase = new Set();
   for (const r of ranked) {
     if (out.length >= k) break;
+    const base = r.p.name.replace(/\s*\([^)]*\)\s*$/, "").toLowerCase();
+    if (seenBase.has(base)) continue;
     if ((per[r.p.category] = (per[r.p.category] || 0) + 1) > perCategory) continue;
+    seenBase.add(base);
     out.push(r);
   }
   out.forEach((r, i) => { r.rank = i + 1; r.reason = explain(r, u); });

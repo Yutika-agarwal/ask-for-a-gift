@@ -150,6 +150,7 @@ export function understand(raw, ctx) {
   while ((nm = negRe.exec(rest))) {
     const lead = nm[0].split(/\s+/)[0];
     const phrase = nm[1].trim();
+    if (/\b(?:small|tiny|little|loose)\s+(?:parts|pieces|bits)\b/.test(phrase)) { constraints.noSmallParts = true; negMatches.push(nm[0]); continue; }
     // "not too expensive", "not a ..." phrases that are modifiers rather than topics
     if (/^(?:expensive|cheap|big|small|heavy|fancy|pricey|boring)\b/.test(phrase)) { negMatches.push(nm[0]); continue; }
     const parts = phrase.split(/\s*(?:,|\bor\b|\band\b|\bnor\b)\s*/).map((x) => x.trim()).filter(Boolean);
@@ -167,6 +168,10 @@ export function understand(raw, ctx) {
     }
     negMatches.push(nm[0]);
   }
+  // "without anything that needs charging", "nothing that takes batteries": the negation regex stops at "that"
+  const powerRe = /\b(?:no|not|without|nothing|avoid|never)\b[^.,;]*?\b(?:charg\w*|batter\w*|plug\w*|power(?:ed)?\b|electric\w*)/;
+  const pm = rest.match(powerRe);
+  if (pm) { constraints.noBatteries = true; rest = rest.replace(pm[0], " "); }
   for (const m of negMatches) rest = rest.replace(m, " ");
 
   // "<x>-free", "<x> free", "<x> allergy"
@@ -203,7 +208,7 @@ export function understand(raw, ctx) {
     if (t === "thank" && toks[i + 1] === "you") { occasion = "thank you"; i++; continue; }
     if (t === "new" && toks[i + 1] === "year") { occasion = "new year"; i++; continue; }
     if (t === "baby" && toks[i + 1] === "shower") { occasion = "baby shower"; recKey = recKey === "baby" ? null : recKey; i++; continue; }
-    if (STOP.has(t) || t.length < 3 || ["old", "year", "years", "yrs", "age", "aged", "new", "his", "her", "free", "safe", "allergy", "yet", "than", "own", "work", "works", "year", "lover", "lovers", "fan", "fans", "enthusiast", "person", "people", "obsessed", "hobby", "hobbies", "thank", "thanks", "into", "keen", "passionate", "play", "plays", "playing", "played", "make", "makes", "making", "use", "uses", "using", "wear", "wears", "collect", "collects"].includes(t)) continue;
+    if (STOP.has(t) || t.length < 3 || ["old", "year", "years", "yrs", "age", "aged", "new", "his", "her", "free", "safe", "allergy", "yet", "than", "own", "work", "works", "year", "surprise", "surprises", "lover", "lovers", "owner", "owners", "someone", "somebody", "fan", "fans", "enthusiast", "person", "people", "obsessed", "hobby", "hobbies", "thank", "thanks", "into", "keen", "passionate", "play", "plays", "playing", "played", "make", "makes", "making", "use", "uses", "using", "wear", "wears", "collect", "collects"].includes(t)) continue;
     if (/^\d+$/.test(t)) continue;
     interestToks.push(t);
   }
@@ -211,7 +216,7 @@ export function understand(raw, ctx) {
   // remove interests that are clearly the excluded terms
   const exStems = new Set(constraints.exclude.map(stem));
   const allInterests = [...new Set(interestToks.filter((t) => !exStems.has(stem(t))))];
-  const interests = allInterests.filter((t) => vocab.has(t) || ctx.hasVector?.(t));
+  const interests = allInterests.filter((t) => vocab.has(t) || ctx.hasVector?.(t) || vocab.stemSet.has(stem(t)));
   const unknown = allInterests.filter((t) => !interests.includes(t));
   for (const t of unknown) notes.push(`I did not recognise "${t}", so I left it out.`);
 

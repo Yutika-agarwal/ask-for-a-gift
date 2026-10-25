@@ -85,8 +85,8 @@ for i, cat in enumerate(cats):
     for k in range(n):
         for _ in range(50):
             noun = rng.choice(nouns); adj = rng.choice(adjs)
-            nm = f"{adj} {noun}" if "set" not in noun or rng.random() < .5 else noun
-            if nm in seen: nm = f"{adj} {noun} ({rng.choice(['Blue','Sage','Charcoal','Rose','Natural','Navy'])})"
+            nm = f"{adj} {noun}" if adj.lower() not in noun.lower() and ("set" not in noun or rng.random() < .5) else noun
+            if nm in seen: nm = f"{nm} ({rng.choice(['Blue','Sage','Charcoal','Rose','Natural','Navy'])})"
             if nm not in seen: break
         seen.add(nm)
         pid += 1
