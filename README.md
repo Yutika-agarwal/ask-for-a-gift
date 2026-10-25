@@ -73,7 +73,15 @@ Zero-result queries out of 50: keyword 6, embedding 4, full pipeline 0.
 
 **Clarifying questions:** 8 of 8 vague or contradictory queries correctly got a question. It also asked once when I had labelled the query answerable (q27, "hobby gift for grandpa that isn't a board game or puzzle", which names no actual hobby). I think the system is right and my label is debatable; I left the label so you can decide.
 
-**Failure gallery** (full list with the actual results in [eval/RESULTS.md](eval/RESULTS.md)): q14 "photography and travel" puts a "Travel sketchbook" first because the word *travel* is in its name; q40 "yoga mat for my sistr" fills the lower slots with other kinds of *mat* (a baking mat, a sleeping pad) because only two yoga mats exist; q25 "cozy gift, no candles" ranks a "cozy reading pillow" first on the word *cozy*; q31 and q30 lose points to near-duplicate variants. These are keyword-in-the-name problems that a better embedding or a learned ranker would address.
+**Failure gallery** (all nine with the actual results: [eval/RESULTS.md](eval/RESULTS.md)):
+- q14 "photography and travel": a "Travel sketchbook" ranks first because the word *travel* is in its name (grade 0).
+- q40 "yoga mat for my sistr": only two yoga mats exist, and the lower slots fill with other kinds of *mat* (a baking mat, a sleeping pad); NDCG 0.36, the worst query.
+- q25 "cozy gift for mom, no candles": a "cozy reading pillow" ranks 5th on the word *cozy*, outside the categories I labelled relevant.
+- q02 "gift for a gardener": an "herb garden planter" filed under *cooking* ranks 4th and my labels call it irrelevant, which is arguably too strict.
+- q27: asked a question where I'd labelled it answerable (above).
+- q06, q07, q30, q31: the top results are all right but keyword search scores higher by 0.06 to 0.13 deeper in the list. I have not diagnosed why.
+
+Most of these are keyword-in-the-name problems that a better embedding or a learned ranker would address.
 
 **Iteration log** (kept honest; I changed things after seeing eval results):
 
