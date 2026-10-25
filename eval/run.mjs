@@ -41,6 +41,7 @@ for (const q of queries) {
     const res = fn(q, u);
     const viol = {};
     for (const r of res) { const { violation } = gradeProduct(r.p, q); if (violation) viol[violation] = (viol[violation] || 0) + 1; }
+    if (name.startsWith("hybrid_full") && row.expect === "clarify" && row.asked) { row.methods[name] = { ndcg: null, n: 0, violations: {}, top: [], asked: true }; continue; }
     row.methods[name] = { ndcg: ndcgAt(res, q, catalog), n: res.length, violations: viol, top: res.slice(0, 5).map((r) => ({ name: r.p.name, category: r.p.category, price: r.p.price, grade: gradeProduct(r.p, q).grade, violation: gradeProduct(r.p, q).violation })) };
   }
   rows.push(row);
@@ -71,7 +72,7 @@ const zeroResult = Object.fromEntries(names.map((m) => [m, rows.filter((r) => r.
 
 // "hybrid_full" counts a clarifying question as a non-result; list queries where full pipeline < keyword.
 const worse = answerable.filter((r) => (r.methods.hybrid_full.ndcg ?? 0) < (r.methods.keyword.ndcg ?? 0) - 1e-9).map((r) => r.id);
-const failures = answerable.filter((r) => (r.methods.hybrid_full.ndcg ?? 1) < 0.7 || r.id && worse.includes(r.id));
+const failures = answerable.filter((r) => (r.methods.hybrid_full.ndcg ?? 0) < 0.8 || (r.methods.hybrid_full.ndcg ?? 0) < (r.methods.keyword.ndcg ?? 0) - 0.05);
 
 const out = { generatedAt: new Date().toISOString(), mode: useLLM || Object.keys(llmCache).length ? "demo + cached LLM understanding" : "demo (deterministic rule-based understanding; no LLM calls)", catalog: { products: catalog.length, synthetic: catalog.filter((p) => p.synthetic).length }, k: 10, nQueries: queries.length, nAnswerable: answerable.length, overall, bySlice, clarify, violations, zeroResult, worseThanKeyword: worse, rows };
 fs.writeFileSync(path.join(ROOT, "eval/results.json"), JSON.stringify(out, null, 1));
@@ -89,7 +90,7 @@ L.push("## Clarifying questions", "", `- Expected a question: ${clarify.expected
 L.push("## Constraint violations in the top 10 (judged against the gold spec)", "", "| Method | price | age | battery | allergen | small parts | excluded |", "|---|---|---|---|---|---|---|");
 for (const m of names) { const v = violations[m]; L.push(`| ${label[m].split(" (")[0]} | ${v.price || 0} | ${v.age || 0} | ${v.battery || 0} | ${v.allergen || 0} | ${v.small_parts || 0} | ${v.excluded || 0} |`); }
 L.push("", `Zero-result queries (of ${queries.length}): ${names.map((m) => `${label[m].split(" (")[0]} ${zeroResult[m]}`).join(", ")}.`, "");
-L.push("## Failure gallery", "", "Queries where the full pipeline scored below 0.70 NDCG@10 or lost to plain keyword search. Grade shown per result: 0 = irrelevant or violates a constraint, 3 = ideal.", "");
+L.push("## Failure gallery", "", "Queries where the full pipeline scored below 0.80 NDCG@10 or lost to plain keyword search by more than 0.05. Grade shown per result: 0 = irrelevant or violates a constraint, 3 = ideal.", "");
 for (const r of failures) {
   L.push(`### ${r.id} · ${r.type} · "${r.query}"`, "", `NDCG@10: keyword ${f3(r.methods.keyword.ndcg)}, embedding ${f3(r.methods.embedding.ndcg)}, full ${f3(r.methods.hybrid_full.ndcg)}. Understood as: recipient ${r.understanding.recipient ? r.understanding.recipient.label + ", age " + r.understanding.recipient.age : "none"}; interests ${r.understanding.interests.join(", ") || "none"}; budget ${r.understanding.budget ? JSON.stringify(r.understanding.budget) : "none"}.`, "");
   for (const m of ["keyword", "hybrid_full"]) { L.push(`- **${label[m].split(" (")[0]}** top 3: ${r.methods[m].top.slice(0, 3).map((t) => `${t.name} ($${t.price}, grade ${t.grade}${t.violation ? ", violates " + t.violation : ""})`).join("; ") || "(no results)"}`); }

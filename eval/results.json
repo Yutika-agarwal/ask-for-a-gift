@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-25T14:54:17.184Z",
+ "generatedAt": "2026-10-25T14:57:51.543Z",
  "mode": "demo (deterministic rule-based understanding; no LLM calls)",
  "catalog": {
   "products": 600,
@@ -55,7 +55,7 @@
    "keyword": 0.4,
    "embedding": 0.6330582357055461,
    "hybrid_retrieval": 0.6820492840418853,
-   "hybrid_full": 0
+   "hybrid_full": null
   }
  },
  "clarify": {
@@ -8769,10 +8769,11 @@
      ]
     },
     "hybrid_full": {
-     "ndcg": 0,
+     "ndcg": null,
      "n": 0,
      "violations": {},
-     "top": []
+     "top": [],
+     "asked": true
     }
    }
   },
@@ -8861,7 +8862,8 @@
      "ndcg": null,
      "n": 0,
      "violations": {},
-     "top": []
+     "top": [],
+     "asked": true
     }
    }
   },
@@ -8988,10 +8990,11 @@
      ]
     },
     "hybrid_full": {
-     "ndcg": 0,
+     "ndcg": null,
      "n": 0,
      "violations": {},
-     "top": []
+     "top": [],
+     "asked": true
     }
    }
   },
@@ -9118,10 +9121,11 @@
      ]
     },
     "hybrid_full": {
-     "ndcg": 0,
+     "ndcg": null,
      "n": 0,
      "violations": {},
-     "top": []
+     "top": [],
+     "asked": true
     }
    }
   },
@@ -9210,7 +9214,8 @@
      "ndcg": null,
      "n": 0,
      "violations": {},
-     "top": []
+     "top": [],
+     "asked": true
     }
    }
   },
@@ -9375,10 +9380,11 @@
      ]
     },
     "hybrid_full": {
-     "ndcg": 0,
+     "ndcg": null,
      "n": 0,
      "violations": {},
-     "top": []
+     "top": [],
+     "asked": true
     }
    }
   },
@@ -9556,7 +9562,8 @@
      "ndcg": null,
      "n": 0,
      "violations": {},
-     "top": []
+     "top": [],
+     "asked": true
     }
    }
   },
@@ -9723,10 +9730,11 @@
      ]
     },
     "hybrid_full": {
-     "ndcg": 0,
+     "ndcg": null,
      "n": 0,
      "violations": {},
-     "top": []
+     "top": [],
+     "asked": true
     }
    }
   }

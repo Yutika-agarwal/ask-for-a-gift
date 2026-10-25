@@ -23,7 +23,7 @@ Mode: **demo (deterministic rule-based understanding; no LLM calls)**. Generated
 | negation (7) | 0.446 | 0.212 | 0.487 | 0.785 |
 | safety (7) | 0.804 | 0.321 | 0.781 | 0.901 |
 | misspelling (7) | 0.325 | 0.216 | 0.293 | 0.908 |
-| clarify (8) | 0.400 | 0.633 | 0.682 | 0.000 |
+| clarify (8) | 0.400 | 0.633 | 0.682 | n/a |
 
 The `clarify` row scores the baselines only where gold labels exist; the full pipeline correctly returns a question instead of results there, so its NDCG is n/a or 0 by design.
 
@@ -45,7 +45,7 @@ Zero-result queries (of 50): Keyword 6, Embedding only 4, Hybrid retrieval only 
 
 ## Failure gallery
 
-Queries where the full pipeline scored below 0.70 NDCG@10 or lost to plain keyword search. Grade shown per result: 0 = irrelevant or violates a constraint, 3 = ideal.
+Queries where the full pipeline scored below 0.80 NDCG@10 or lost to plain keyword search by more than 0.05. Grade shown per result: 0 = irrelevant or violates a constraint, 3 = ideal.
 
 ### q02 · simple · "gift for a gardener"
 
@@ -75,6 +75,13 @@ NDCG@10: keyword 1.000, embedding 0.556, full 0.780. Understood as: recipient no
 - **Keyword** top 3: Compact photo printer ($43.99, grade 3); Pro photo album ($63.99, grade 3); Vintage camera strap ($9.99, grade 3)
 - **Full pipeline** top 3: Travel sketchbook bundle (Natural) ($36.99, grade 0); Pro photo album (Charcoal) ($55.99, grade 3); Vintage photo album (Blue) ($12.99, grade 3)
 
+### q25 · negation · "cozy gift for mom, no candles"
+
+NDCG@10: keyword 0.351, embedding 0.069, full 0.763. Understood as: recipient mom, age 45; interests cozy; budget none.
+
+- **Keyword** top 3: Cozy soy candle set ($17.99, grade 0, violates excluded); Soy candle set ($11.99, grade 0, violates excluded); Plush soy candle set ($39.99, grade 0, violates excluded)
+- **Full pipeline** top 3: Cozy weighted blanket ($31.99, grade 3); Plush fuzzy socks ($94.99, grade 3); Cozy ceramic mug set ($23.99, grade 3)
+
 ### q27 · negation · "hobby gift for grandpa that isn't a board game or puzzle"
 
 NDCG@10: keyword 0.000, embedding 0.000, full 0.000. Understood as: recipient grandpa, age 72; interests none; budget none.
@@ -95,13 +102,6 @@ NDCG@10: keyword 1.000, embedding 0.269, full 0.867. Understood as: recipient ki
 
 - **Keyword** top 3: Brick building set ($57.99, grade 3); Brick building set (Charcoal) ($83.99, grade 3); Brick building set (Sage) ($41.99, grade 3)
 - **Full pipeline** top 3: Brick building set ($57.99, grade 3); Starter brick building set ($29.99, grade 3); Mega marble run ($21.99, grade 3)
-
-### q35 · safety · "gift for a 10 year old into science, no batteries"
-
-NDCG@10: keyword 1.000, embedding 0.425, full 0.964. Understood as: recipient kid, age 10; interests science; budget none.
-
-- **Keyword** top 3: Microscope set (Sage) ($75.99, grade 3); Junior star projector ($15.99, grade 3); Junior microscope set ($11.99, grade 3)
-- **Full pipeline** top 3: Young dinosaur excavation kit ($30.99, grade 3); Explorer dinosaur excavation kit ($54.99, grade 3); Junior crystal growing kit ($82.99, grade 3)
 
 ### q40 · misspelling · "yoga mat for my sistr"
 
