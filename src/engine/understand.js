@@ -33,7 +33,7 @@ for (const [k, ws] of Object.entries(ALLERGEN_WORDS)) for (const w of ws) ALLERG
 // Words that, when negated, mean something other than "exclude this topic".
 const BATTERY_WORDS = new Set(["battery", "batteries", "batterie", "electronic", "electronics", "electric", "rechargeable", "charging", "plug", "plugs"]);
 // Negated word -> catalog terms to exclude (stems matched against name/category/interests/tags).
-const EXCLUDE_SYNONYMS = { alcohol: ["cocktail", "wine", "bar", "alcohol"], booze: ["cocktail", "wine", "bar"], sweets: ["snack", "chocolate", "sweet"], candy: ["snack", "chocolate", "sweet"], sugar: ["snack", "chocolate", "sweet"], screens: ["screen", "gaming", "video"], screen: ["screen", "gaming", "video"], tech: ["tech", "gadget", "electronic"], gadgets: ["tech", "gadget"], clutter: ["decor", "home"], toys: ["toy", "plush", "building"], books: ["book", "reading", "novel"], candles: ["candle"], games: ["game", "gaming"], violence: ["gaming"] };
+export const EXCLUDE_SYNONYMS = { alcohol: ["cocktail", "wine", "bar", "alcohol"], booze: ["cocktail", "wine", "bar"], sweets: ["snack", "chocolate", "sweet"], candy: ["snack", "chocolate", "sweet"], sugar: ["snack", "chocolate", "sweet"], screens: ["screen", "gaming", "video"], screen: ["screen", "gaming", "video"], tech: ["tech", "gadget", "electronic"], gadgets: ["tech", "gadget"], clutter: ["decor", "home"], toys: ["toy", "plush", "building"], books: ["book", "reading", "novel"], candles: ["candle"], games: ["game", "gaming"], violence: ["gaming"] };
 
 const NUM_WORDS = { one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10, eleven: 11, twelve: 12, thirteen: 13, fourteen: 14, fifteen: 15, sixteen: 16, seventeen: 17, eighteen: 18, nineteen: 19, twenty: 20 };
 
@@ -236,7 +236,11 @@ export function understand(raw, ctx) {
   if (recipient?.ageAssumed && ["kid", "toddler", "teen"].includes(recipient.key)) confidence -= 0.05;
   confidence = Math.max(0.05, Math.min(0.95, confidence));
   let clarify = null;
-  if (!hasInterest) {
+  const exAll = new Set(constraints.exclude.flatMap((w) => (EXCLUDE_SYNONYMS[w] || [w]).map(stem)));
+  const clash = interests.find((t) => exAll.has(stem(t)) || (EXCLUDE_SYNONYMS[t] || []).some((x) => exAll.has(stem(x))) );
+  if (clash) {
+    clarify = `You asked for "${clash}" but also ruled out "${constraints.exclude.find((w) => (EXCLUDE_SYNONYMS[w] || [w]).map(stem).includes(stem(clash)) || (EXCLUDE_SYNONYMS[clash] || []).some((x) => (EXCLUDE_SYNONYMS[w] || [w]).map(stem).includes(stem(x)))) || clash}". Which should win?`;
+  } else if (!hasInterest) {
     const who = recipient ? `your ${recipient.label}` : null;
     clarify = unknown.length ? `I did not recognise "${unknown[0]}". What kind of thing ${who ? `is ${who}` : "are they"} into? For example cooking, hiking, music or reading.`
       : who ? `What is ${who} into? For example cooking, hiking, music or reading.` : "Who is the gift for, and what are they into?";

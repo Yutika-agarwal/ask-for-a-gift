@@ -2,16 +2,10 @@
 // with hard constraints and a transparent weighted score.
 import { tokenize, stem, STOP } from "./text.js";
 import { embed, cosine } from "./vectors.js";
-import { understand, buildSpellVocab } from "./understand.js";
+import { understand, buildSpellVocab, EXCLUDE_SYNONYMS } from "./understand.js";
 
 export const WEIGHTS = { relevance: 0.6, recipient: 0.15, quality: 0.15, occasion: 0.05, budget: 0.05 };
 const FIELD_WEIGHT = { name: 3, category: 2, interests: 3, tags: 1, description: 1, recipients: 1, occasions: 1 };
-
-const EXCLUDE_SYNONYMS = {
-  alcohol: ["cocktail", "wine", "bar", "alcohol"], booze: ["cocktail", "wine", "bar"], sweets: ["snack", "chocolate", "sweet"], candy: ["snack", "chocolate", "sweet"],
-  sugar: ["snack", "chocolate", "sweet"], screens: ["screen", "gaming", "video"], screen: ["screen", "gaming", "video"], tech: ["tech", "gadget", "electronic"],
-  gadgets: ["tech", "gadget"], clutter: ["decor"], toys: ["toy", "plush", "building"], games: ["game", "gaming"], violence: ["gaming"], mugs: ["mug"], candles: ["candle"],
-};
 
 function productFields(p) {
   return {
@@ -171,10 +165,9 @@ export function search(index, query, { k = 10, understanding = null, feedback = 
   const kw = cands.map((d) => bm25(index, d, qs));
   const em = cands.map((d) => (qv ? cosine(qv, d.vec) : 0));
   const kmax = Math.max(1e-9, ...kw);
-  const eLo = Math.min(...em), eHi = Math.max(...em);
   const ranked = cands.map((d, i) => {
     const kwN = kw[i] / kmax;
-    const emN = eHi > eLo ? (em[i] - eLo) / (eHi - eLo) : 0;
+    const emN = Math.max(0, Math.min(1, (em[i] - 0.25) / 0.55));
     const rel = 0.5 * kwN + 0.5 * emN;
     const f = {
       relevance: rel,
@@ -187,7 +180,8 @@ export function search(index, query, { k = 10, understanding = null, feedback = 
     for (const key of Object.keys(WEIGHTS)) score += WEIGHTS[key] * f[key];
     const fb = feedback[d.p.category] || 0;
     const adj = Math.max(-0.2, Math.min(0.1, fb > 0 ? 0.04 * fb : 0.08 * fb));
-    return { p: d.p, score: score + adj, features: f, parts: { keyword: kwN, embedding: emN }, feedbackAdj: adj };
+    const matched = u.interests.filter((t) => d.stems.has(stem(t)));
+    return { p: d.p, score: score + adj, matched, features: f, parts: { keyword: kwN, embedding: emN, cosine: em[i] }, weak: kw[i] === 0 && em[i] < 0.5, feedbackAdj: adj };
   });
   ranked.sort((a, b) => b.score - a.score || b.p.review_count - a.p.review_count);
 
@@ -199,7 +193,8 @@ export function search(index, query, { k = 10, understanding = null, feedback = 
     out.push(r);
   }
   out.forEach((r, i) => { r.rank = i + 1; r.reason = explain(r, u); });
-  return { u, results: out, ranked, excludedCount, candidateCount: cands.length, needsClarification: false };
+  const weakAll = out.length > 0 && out.every((r) => r.weak);
+  return { u, results: out, ranked, excludedCount, candidateCount: cands.length, needsClarification: false, weakAll };
 }
 
 // ---------- one-sentence explanations ----------
@@ -209,7 +204,9 @@ export function explain(r, u) {
   const topic = u.interests.slice(0, 2).join(" + ");
   const bits = [];
   if (!topic) bits.push(`a ${p.category} pick`);
-  else if (f.relevance >= 0.6) bits.push(p.category === u.interests[0] || p.interests.includes(u.interests[0]) ? `a direct match for "${topic}"` : `matches "${topic}" through ${p.category}`);
+  else if (r.weak) bits.push(`only a loose guess for "${topic}" (${p.category})`);
+  else if (r.matched.length && r.matched.length < u.interests.length) bits.push(`matches "${r.matched.join(" + ")}" (nothing here matches "${u.interests.filter((t) => !r.matched.includes(t)).join(" + ")}")`);
+  else if (f.relevance >= 0.6) bits.push(r.matched.length ? `a direct match for "${topic}"` : `matches "${topic}" through ${p.category}`);
   else bits.push(`a looser match for "${topic}" (${p.category})`);
   if (u.recipient && f.recipient >= 1) bits.push(`suits ${u.recipient.label}`);
   if (u.budget?.max != null) bits.push(`$${p.price.toFixed(0)} is inside your $${u.budget.max} budget`);
