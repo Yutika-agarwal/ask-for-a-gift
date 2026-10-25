@@ -9,7 +9,7 @@ nice good great best cool lovely thoughtful special perfect unique fun cute pret
 enjoying into totally always maybe`.split(/\s+/));
 
 export function normalize(s) {
-  return s.toLowerCase().replace(/[’`]/g, "'").replace(/'s\b/g, "").replace(/n't\b/g, " not").replace(/[^a-z0-9$€£.\-' ]+/g, " ");
+  return s.toLowerCase().replace(/[’`]/g, "'").replace(/\b(do|does|did|is|are|was|can|could|would|should|wo|ca)nt\b/g, "$1 not").replace(/\bwont\b/g, "will not").replace(/\bcant\b/g, "can not").replace(/'s\b/g, "").replace(/n't\b/g, " not").replace(/[^a-z0-9$€£.\-' ]+/g, " ");
 }
 
 export function tokenize(s) {

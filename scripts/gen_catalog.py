@@ -110,7 +110,7 @@ for i, cat in enumerate(cats):
             "id": f"p{pid:04d}", "name": nm[0].upper()+nm[1:], "category": cat,
             "interests": interests, "tags": tg, "description": desc,
             "price": price, "age_min": lo, "age_max": hi,
-            "battery": battery, "allergens": allergens,
+            "battery": battery, "small_parts": cat in SMALL_PARTS or (cat in ("toddler","outdoorplay","crafts","jewelry") and rng.random() < .4), "allergens": allergens,
             "recipients": recips, "occasions": occs,
             "rating": rating, "review_count": count,
             "reviews": make_reviews(aspects, rating, nm),
